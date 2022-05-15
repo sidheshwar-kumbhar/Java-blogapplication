@@ -1,10 +1,29 @@
+/*********************************************************************************************** /
+//
+// Class Name : SinglyLinkedList
+// File/Class/Function Description: This class is used for SinglyLinkedList
+//
+// Revision History
+//   Date:           			  Changed By    	            Revision Comments
+//   15/05/2022 (DD-MM-YYYY)      Sidheshwar                    Initial writing of code.
+//					
+//
+/************************************************************************************************/
 package com.dsa.java.example.dev.v2;
-
 
 public class SinglyLinkedList {
 
+	// Head node to start Singly Linked List
 	public Node head;
 
+	/***********************************************************************************************
+	 * Function Name: createList() : This function is used to create list
+	 * 
+	 * @parameter(s) : NA
+	 * 
+	 * @return: NA
+	 * @author Sidheshwar Kumbhar
+	 ************************************************************************************************/
 	public void createList() {
 		if (this.head == null) {
 			this.head = new Node(0);
@@ -14,6 +33,15 @@ public class SinglyLinkedList {
 		}
 	}
 
+	/************************************************************************************************
+	 * Function Name: displayList() : This function is used to display nodes from
+	 * list using do-while loop
+	 * 
+	 * @parameter(s) : NA
+	 * 
+	 * @return: NA
+	 * @author Sidheshwar Kumbhar
+	 ************************************************************************************************/
 	public void displayList() {
 		if (this.head == null) {
 			System.out.println("Singly Linked List is empty !");
@@ -27,6 +55,34 @@ public class SinglyLinkedList {
 		}
 	}
 
+	/************************************************************************************************
+	 * Function Name: displayListRecursively() : This function is used to display
+	 * nodes from list using recursively
+	 * 
+	 * @parameter(s) : NA
+	 * 
+	 * @return: NA
+	 * @author Sidheshwar Kumbhar
+	 ************************************************************************************************/
+	public void displayListRecursively(Node head) {
+		if (head == null) {
+			System.out.println(" Null ");
+		} else {
+			Node correntNode = head;
+			System.out.print(correntNode.getData() + " -> ");
+			this.displayListRecursively(correntNode.getNext());
+
+		}
+	}
+
+	/************************************************************************************************
+	 * Function Name: insert() : This function is used to insert data in list
+	 * 
+	 * @parameter(s) : data - data need to be insert in the list
+	 * 
+	 * @return: NA
+	 * @author Sidheshwar Kumbhar
+	 ************************************************************************************************/
 	public void insert(int data) {
 		Node node = new Node(data);
 		Node last = this.head;
@@ -40,6 +96,16 @@ public class SinglyLinkedList {
 		}
 	}
 
+	/************************************************************************************************
+	 * Function Name: insertAfter() : This function is used to insert data in list
+	 * after data node
+	 * 
+	 * @parameter(s) : previousNode - Insert data after this node, dataToBeInserted
+	 * - data need to be insert in the list
+	 * 
+	 * @return: NA
+	 * @author Sidheshwar Kumbhar
+	 ************************************************************************************************/
 	public void insertAfter(Node previousNode, int dataToBeInserted) {
 		if (previousNode == null) {
 			System.out.println("The given previous node cannot be null");
@@ -50,6 +116,15 @@ public class SinglyLinkedList {
 		previousNode.next = newNode;
 	}
 
+	/************************************************************************************************
+	 * Function Name: search() : This function is used to search on the data using
+	 * recursively
+	 * 
+	 * @parameter(s) : head - Head node, data - data to be search
+	 * 
+	 * @return: true / false
+	 * @author Sidheshwar Kumbhar
+	 ************************************************************************************************/
 	public boolean search(Node head, int data) {
 		if (head == null)
 			return false;
@@ -58,6 +133,14 @@ public class SinglyLinkedList {
 		return search(head.next, data);
 	}
 
+	/************************************************************************************************
+	 * Function Name: size() : This function is used to get size of list
+	 * 
+	 * @parameter(s) : head - Head node,
+	 * 
+	 * @return: list size
+	 * @author Sidheshwar Kumbhar
+	 ************************************************************************************************/
 	public int size(Node head) {
 		int count = 0;
 		Node currNode = head;
@@ -68,6 +151,15 @@ public class SinglyLinkedList {
 		return count;
 	}
 
+	/************************************************************************************************
+	 * Function Name: deleteAtPosition() : This function is used to delete node at
+	 * position
+	 * 
+	 * @parameter(s) : head - Head node, pos - position
+	 * 
+	 * @return: NA
+	 * @author Sidheshwar Kumbhar
+	 ************************************************************************************************/
 	public void deleteAtPosition(Node head, int pos) {
 		System.out.println("trying to delete node at position:" + pos);
 
@@ -101,6 +193,14 @@ public class SinglyLinkedList {
 
 	}
 
+	/************************************************************************************************
+	 * Function Name: deleteByKey() : This function is used to delete node by data
+	 * 
+	 * @parameter(s) : head - Head node, data - data
+	 * 
+	 * @return: NA
+	 * @author Sidheshwar Kumbhar
+	 ************************************************************************************************/
 	public void deleteByKey(Node head, int data) {
 		System.out.println("trying to delete node with data:" + data);
 		// Store head node

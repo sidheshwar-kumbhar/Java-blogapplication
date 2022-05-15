@@ -1,3 +1,14 @@
+/**************************************************************************************************************************** /
+//
+// Class Name : Node
+// File/Class/Function Description: This class is used for data node
+//
+// Revision History
+//               	 Date:           			  Changed By    	            Revision Comments
+//                   15/05/2022 (DD-MM-YYYY)      Sidheshwar                    Initial writing of code.
+//					
+//
+/****************************************************************************************************************************/
 package com.dsa.java.example.dev.v2;
 
 public class Node {
