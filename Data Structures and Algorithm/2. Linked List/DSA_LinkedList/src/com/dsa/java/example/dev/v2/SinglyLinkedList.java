@@ -225,4 +225,19 @@ public class SinglyLinkedList {
 			}
 		}
 	}
+	
+	/************************************************************************************************
+	 * Function Name: printReverse() : This function is used to print linked list reverse by recursively
+	 * 
+	 * @parameter(s) : head - Head node
+	 * 
+	 * @return: NA
+	 * @author Sidheshwar Kumbhar
+	 ************************************************************************************************/
+	public void printRecursivelyReverse(Node head) {
+		if(head == null) {
+			System.out.println();
+		}
+		
+	}
 }
