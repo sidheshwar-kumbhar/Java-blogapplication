@@ -3,7 +3,12 @@ package com.java.example.dsa.array;
 public class RotateArray {
 
 	public static void main(String[] args) {
-		int[][] inputArray = { { 2, 4, 6, 10 }, { 5, 3, 1, 11 }, { 8, 7, 9, 12 }, { 21, 22, 23, 24 } };
+		int[][] inputArray = { 
+				{ 2, 4, 6, 10 }, 
+				{ 5, 3, 1, 11 }, 
+				{ 8, 7, 9, 12 }, 
+				{ 6, 8, 4, 24 } 
+			};
 
 		printArray(inputArray);
 		rotateArray90(inputArray);
@@ -41,5 +46,4 @@ public class RotateArray {
 			}
 		}
 	}
-
 }
